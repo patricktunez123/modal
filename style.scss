@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  line-height: 1.4;
+  background: linear-gradient(to right, #353353, #7674ad);
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  width: 600px;
+  max-width: 80%;
+  height: 80vh;
+  border-radius: 10px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  padding: 0 1em;
+  h5 {
+    font-size: 1.5rem;
+  }
+  button {
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+.body {
+  overflow: auto;
+  flex-grow: 1; // fit the full size of the container even when text is too small
+  padding: 0 1em;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid gray;
+  padding: 1em;
+  .btn {
+    padding: 0.6em;
+    margin-right: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+  }
+  .btn.btn-send {
+    background: indigo;
+  }
+  .btn.btn-cancel {
+    background: paleturquoise;
+  }
+  .btn:last-child {
+    margin: 0;
+  }
+}
